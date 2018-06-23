@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/ic_media_play"
+            android:backgroundTint="@color/colorPrimary"
+            android:tag="play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:tag="pause"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@android:drawable/ic_media_pause"
+            app:layout_constraintEnd_toStartOf="@+id/button_delete"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:drawable/ic_delete"
+            android:backgroundTint="@color/colorPrimary"
+            android:tag="delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekbar_volume"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:progressDrawable="@drawable/red_scrubber_progress"
+            android:thumb="@drawable/red_scrubber_control"
+            android:tag="volume"
+            android:thumbOffset="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_pause"
+            app:layout_constraintStart_toEndOf="@+id/button_play"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekbar_speed"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:progressDrawable="@drawable/red_scrubber_progress"
+            android:tag="speed"
+            android:thumb="@drawable/red_scrubber_control"
+            android:thumbOffset="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_pause"
+            app:layout_constraintStart_toEndOf="@+id/button_play"
+            app:layout_constraintTop_toBottomOf="@+id/seekbar_volume" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ef5555</color>
+    <color name="colorPlay">#3f4dab</color>
+    <color name="colorStop">#7f5064</color>
+    <color name="colorPause">#e1adc2</color>
+</resources>

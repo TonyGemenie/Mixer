@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mixer</string>
+    <string name="record_text">Record</string>
+    <string name="play_random_text">Play Random</string>
+    <string name="stop_text">Stop</string>
+    <string name="record_all_text">Record All</string>
+    <string name="stop_all_text">Stop All</string>
+</resources>

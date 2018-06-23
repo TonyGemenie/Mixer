@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:id="@+id/top_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/start_recording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="Single"
+                style="@style/ButtonTheme"
+                android:onClick="recordWavStart"
+                android:text="@string/record_text" />
+
+            <Button
+                android:id="@+id/stop_recording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                style="@style/ButtonTheme"
+                android:onClick="recordWavStop"
+                android:tag="Single"
+                android:text="@string/stop_text" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_controls"
+            android:layout_above="@id/bottom_controls"
+            android:id="@+id/recyclerview"
+            android:background="@color/colorPrimaryDark">
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/bottom_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                style="@style/ButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="recordWavStart"
+                android:tag="Multi"
+                android:text="@string/record_all_text" />
+
+            <Button
+                android:id="@+id/play_random_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/ButtonTheme"
+                android:onClick="playSoundPool"
+                android:text="@string/play_random_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="recordWavStop"
+                style="@style/ButtonTheme"
+                android:tag="Multi"
+                android:text="@string/stop_all_text" />
+        </LinearLayout>
+
+    </RelativeLayout>
